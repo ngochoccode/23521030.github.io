@@ -1,11 +1,464 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Lê Bảo Ngọc</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome (cho icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuGWXnCvsK2j5f+c0I8Tf0b5w2/2n/V5C2fW0P5Q1w5w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <h1>Hello BaoNgoc!</h1>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="50">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Hồ Sơ Của Tôi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#info">Thông Tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Dự Án</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Kinh Nghiệm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Sở Thích</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#strengths">Thế Mạnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#favorite-books">Sách Yêu Thích</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Chứng Chỉ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+
+        <!-- 1) INFO cá nhân -->
+        <section id="info" class="my-5 p-4 bg-light rounded shadow-sm">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="img/avatar.jpg" class="img-fluid rounded-circle profile-img" alt="Ảnh đại diện của Nguyễn Lê Bảo Ngọc">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4">Nguyễn Lê Bảo Ngọc</h1>
+                    <p class="lead">Chuyên viên phân tích nghiệp vụ với niềm đam mê tìm hiểu sâu sắc các nhu cầu kinh doanh và đưa ra các giải pháp sáng tạo, hiệu quả.</p>
+                    <hr>
+                    <h2 class="h4 mt-4">Thông tin liên hệ</h2>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> 23521030@gm.uit.edu.vn</li>
+                        <li><i class="fas fa-phone me-2"></i> (84) 823 524 357</li>
+                        <li><i class="fab fa-linkedin me-2"></i> <a href="https://www.linkedin.com/in/nguyenngocnlbn/" target="_blank">https://www.linkedin.com/in/nguyenngocnlbn/</a></li>
+                        <li><i class="fab fa-github me-2"></i> <a href="https://github.com/ngochoccode" target="_blank">https://github.com/ngochoccode</a></li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> TP. Hồ Chí Minh, Việt Nam</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) Dự án đã tham dự -->
+        <section id="projects" class="my-5 p-4 bg-white rounded shadow-sm">
+            <h2 class="text-center mb-4">Dự Án Đã Tham Dự</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Dự án 1 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Hệ Thống Hãng Hàng không MelAirline</h3>
+                            <p class="card-text">Xây dựng ứng dụng web quản lý nhập, xuất, tồn kho sản phẩm, hỗ trợ đa người dùng và báo cáo.</p>
+                            <p class="card-text"><small class="text-muted"><strong>Vai trò:</strong> Lập trình viên Backend</small></p>
+                            <p class="card-text"><small class="text-muted"><strong>Công nghệ:</strong> Node.js, Express, MongoDB, React, Redux</small></p>
+                            <a href="#" target="_blank" class="btn btn-primary btn-sm mt-2">Xem Dự Án <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dự án 2 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Hệ thống Quản lý Tuyển dụng</h3>
+                            <p class="card-text">Phát triển nền tảng cho phép nhà tuyển dụng và người tìm kiếm việc làm tìm được nhau.</p>
+                            <p class="card-text"><small class="text-muted"><strong>Vai trò:</strong> Lập trình viên Full-stack</small></p>
+                            <p class="card-text"><small class="text-muted"><strong>Công nghệ:</strong> Python, Django, PostgreSQL, HTML, CSS, JavaScript</small></p>
+                            <a href="#" target="_blank" class="btn btn-primary btn-sm mt-2">Xem Dự Án <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dự án 3 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Trang Web Thương Mại Điện Tử</h3>
+                            <p class="card-text">Tham gia phát triển module giỏ hàng và thanh toán cho một dự án E-commerce lớn.</p>
+                            <p class="card-text"><small class="text-muted"><strong>Vai trò:</strong> Lập trình viên Frontend</small></p>
+                            <p class="card-text"><small class="text-muted"><strong>Công nghệ:</strong> Vue.js, Vuex, SCSS, Webpack</small></p>
+                            <a href="#" target="_blank" class="btn btn-primary btn-sm mt-2">Xem Dự Án <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- 3) Kinh nghiệm -->
+        <section id="experience" class="my-5 p-4 bg-light rounded shadow-sm">
+            <h2 class="text-center mb-4">Kinh Nghiệm</h2>
+            <div class="timeline">
+                <!-- Kinh nghiệm 1 -->
+                <div class="timeline-item row g-0">
+                    <div class="col-md-6 timeline-content order-md-1">
+                        <h3 class="h5">Chuyên Viên Phân Tích Nghiệp Vụ Cao Cấp</h3>
+                        <p class="mb-1"><strong>Công ty Tech Solutions Global</strong> | 01/2023 - Hiện tại</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check-circle me-2"></i> Thu thập, phân tích và tài liệu hóa yêu cầu nghiệp vụ từ các bên liên quan.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Xây dựng các tài liệu phân tích như BRD, SRS, Use Case, Flowchart, Wireframe.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Phối hợp với đội ngũ phát triển để đảm bảo giải pháp đáp ứng đúng yêu cầu.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Hỗ trợ kiểm thử UAT và đào tạo người dùng cuối.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 timeline-date order-md-2 d-flex justify-content-md-end justify-content-start align-items-center">
+                        <span class="badge bg-primary text-white">01/2023 - Hiện tại</span>
+                    </div>
+                </div>
+                <!-- Kinh nghiệm 2 -->
+                <div class="timeline-item row g-0">
+                    <div class="col-md-6 timeline-content order-md-2 order-md-2-reverse">
+                        <h3 class="h5">Chuyên Viên Phân Tích Nghiệp Vụ</h3>
+                        <p class="mb-1"><strong>Công ty Digital Innovation</strong> | 06/2021 - 12/2022</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check-circle me-2"></i> Tham gia vào các buổi họp stakeholders để xác định và làm rõ yêu cầu.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Phân tích tác động của các thay đổi yêu cầu đối với hệ thống hiện có.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Tạo và quản lý backlog sản phẩm, hỗ trợ Product Owner.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Hỗ trợ đội QA trong việc xây dựng kịch bản kiểm thử.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 timeline-date order-md-1 d-flex justify-content-md-start justify-content-start align-items-center">
+                        <span class="badge bg-secondary text-white">06/2021 - 12/2022</span>
+                    </div>
+                </div>
+                <!-- Kinh nghiệm 3 (Ví dụ thêm một kinh nghiệm nữa nếu cần) -->
+                <div class="timeline-item row g-0">
+                    <div class="col-md-6 timeline-content order-md-1">
+                        <h3 class="h5">Thực Tập Sinh Phân Tích Dữ Liệu</h3>
+                        <p class="mb-1"><strong>Công ty Data Insights Co.</strong> | 01/2021 - 05/2021</p>
+                        <ul class="list-unstyled text-muted">
+                            <li><i class="fas fa-check-circle me-2"></i> Hỗ trợ thu thập và làm sạch dữ liệu từ các nguồn khác nhau.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Thực hiện phân tích cơ bản để tìm ra xu hướng và insight.</li>
+                            <li><i class="fas fa-check-circle me-2"></i> Chuẩn bị báo cáo và trình bày kết quả phân tích.</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 timeline-date order-md-2 d-flex justify-content-md-end justify-content-start align-items-center">
+                        <span class="badge bg-info text-white">01/2021 - 05/2021</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4) Sở thích -->
+        <section id="hobbies" class="my-5 p-4 bg-white rounded shadow-sm">
+            <h2 class="text-center mb-4">Sở Thích</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 text-center">
+                <div class="col">
+                    <div class="p-3 border rounded h-100">
+                        <p class="display-5 mb-2">🧩</p>
+                        <h3 class="h6">Giải Đố Logic</h3>
+                        <p class="text-muted">Thử thách bản thân với các trò chơi tư duy và giải quyết vấn đề.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 border rounded h-100">
+                        <p class="display-5 mb-2">📈</p>
+                        <h3 class="h6">Phân Tích Thị Trường</h3>
+                        <p class="text-muted">Nghiên cứu các xu hướng kinh doanh và sự thay đổi của thị trường.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 border rounded h-100">
+                        <p class="display-5 mb-2">📚</p>
+                        <h3 class="h6">Đọc Sách Chuyên Ngành</h3>
+                        <p class="text-muted">Cập nhật kiến thức mới về quản lý dự án, phân tích nghiệp vụ và công nghệ.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 border rounded h-100">
+                        <p class="display-5 mb-2">🎧</p>
+                        <h3 class="h6">Nghe Podcast</h3>
+                        <p class="text-muted">Học hỏi từ các chuyên gia trong lĩnh vực kinh doanh và công nghệ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) Thế mạnh -->
+        <section id="strengths" class="my-5 p-4 bg-light rounded shadow-sm">
+            <h2 class="text-center mb-4">Thế Mạnh</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h3 class="h4 text-center mb-3">Kỹ Năng Cứng</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Thu thập & Phân tích yêu cầu (Elicitation & Analysis)
+                            <span class="badge bg-info text-dark rounded-pill">Expert</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Modeling (UML, BPMN, Data Flow Diagrams)
+                            <span class="badge bg-info text-dark rounded-pill">Expert</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Công cụ: JIRA, Confluence, Miro, MS Visio, Balsamiq
+                            <span class="badge bg-info text-dark rounded-pill">Advanced</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Cơ sở dữ liệu (SQL cơ bản), Phân tích dữ liệu
+                            <span class="badge bg-info text-dark rounded-pill">Intermediate</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Phương pháp luận Agile/Scrum
+                            <span class="badge bg-info text-dark rounded-pill">Advanced</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h4 text-center mb-3">Kỹ Năng Mềm</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fas fa-comments me-2 text-primary"></i> Giao tiếp & Thuyết trình</li>
+                        <li class="list-group-item"><i class="fas fa-lightbulb me-2 text-primary"></i> Tư duy phân tích & Giải quyết vấn đề</li>
+                        <li class="list-group-item"><i class="fas fa-handshake me-2 text-primary"></i> Đàm phán & Xây dựng mối quan hệ</li>
+                        <li class="list-group-item"><i class="fas fa-users me-2 text-primary"></i> Làm việc nhóm & Quản lý stakeholder</li>
+                        <li class="list-group-item"><i class="fas fa-brain me-2 text-primary"></i> Khả năng học hỏi & Thích ứng nhanh</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6) Sách yêu thích -->
+        <section id="favorite-books" class="my-5 p-4 bg-white rounded shadow-sm">
+            <h2 class="text-center mb-4">Sách Yêu Thích</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Sách 1 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <img src="https://placehold.co/600x400" class="card-img-top mx-auto mt-3" alt="Bìa sách Business Analysis for Practitioners">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Business Analysis for Practitioners</h3>
+                            <p class="card-text text-muted"><strong>Tác giả:</strong> PMI</p>
+                            <p class="card-text">Cuốn sách kinh điển cung cấp kiến thức nền tảng và thực tiễn cho mọi BA.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sách 2 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <img src="https://placehold.co/600x400" class="card-img-top mx-auto mt-3" alt="Bìa sách The Lean Startup">
+                        <div class="card-body">
+                            <h3 class="card-title h5">The Lean Startup</h3>
+                            <p class="card-text text-muted"><strong>Tác giả:</strong> Eric Ries</p>
+                            <p class="card-text">Hướng dẫn tư duy khởi nghiệp tinh gọn, rất hữu ích cho BA trong môi trường Agile.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sách 3 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <img src="https://placehold.co/600x400" class="card-img-top mx-auto mt-3" alt="Bìa sách Thinking, Fast and Slow">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Thinking, Fast and Slow</h3>
+                            <p class="card-text text-muted"><strong>Tác giả:</strong> Daniel Kahneman</p>
+                            <p class="card-text">Giúp hiểu sâu sắc hơn về tâm lý con người và quá trình ra quyết định, quan trọng khi làm việc với stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7) Các chứng chỉ đã được nhận -->
+        <section id="certifications" class="my-5 p-4 bg-light rounded shadow-sm">
+            <h2 class="text-center mb-4">Chứng Chỉ Đã Nhận</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Chứng chỉ 1 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">PMI Professional in Business Analysis (PMI-PBA)</h3>
+                            <p class="card-text"><strong>Đơn vị cấp:</strong> Project Management Institute (PMI)</p>
+                            <p class="card-text"><strong>Thời gian:</strong> 03/2024</p>
+                            <a href="https://www.credly.com/badges/your-badge-id-1" target="_blank" class="btn btn-outline-primary btn-sm">Xem Chứng Chỉ <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <!-- Nếu có ảnh chứng chỉ, có thể thêm vào đây, ví dụ: -->
+                            <!-- <img src="img/pmi-pba-certificate.jpg" class="img-fluid mt-3 rounded" alt="Ảnh chứng chỉ PMI-PBA"> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Chứng chỉ 2 -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Certified Scrum Product Owner (CSPO)</h3>
+                            <p class="card-text"><strong>Đơn vị cấp:</strong> Scrum Alliance</p>
+                            <p class="card-text"><strong>Thời gian:</strong> 11/2022</p>
+                            <a href="https://www.scrumalliance.org/community/profile/your-profile-id-2" target="_blank" class="btn btn-outline-primary btn-sm">Xem Chứng Chỉ <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <!-- Nếu có ảnh chứng chỉ, có thể thêm vào đây, ví dụ: -->
+                            <!-- <img src="img/cspo-certificate.jpg" class="img-fluid mt-3 rounded" alt="Ảnh chứng chỉ CSPO"> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Chứng chỉ 3 (Nếu cần thêm) -->
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Entry Certificate in Business Analysis (ECBA)</h3>
+                            <p class="card-text"><strong>Đơn vị cấp:</strong> International Institute of Business Analysis (IIBA)</p>
+                            <p class="card-text"><strong>Thời gian:</strong> 07/2021</p>
+                            <a href="https://www.iiba.org/certification/certification-verification/your-id-3" target="_blank" class="btn btn-outline-primary btn-sm">Xem Chứng Chỉ <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8) Gallery kỷ niệm -->
+        <section id="gallery" class="my-5 p-4 bg-white rounded shadow-sm">
+            <h2 class="text-center mb-4">Gallery Kỷ Niệm</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://via.placeholder.com/800x600?text=Kỷ+Niệm+1">
+                        <img src="https://placehold.co/400" class="img-fluid rounded shadow-sm gallery-thumb" alt="Kỷ niệm làm việc nhóm tại văn phòng">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://via.placeholder.com/800x600?text=Kỷ+Niệm+2">
+                        <img src="https://placehold.co/400" class="img-fluid rounded shadow-sm gallery-thumb" alt="Hội thảo công nghệ cùng đồng nghiệp">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://via.placeholder.com/800x600?text=Kỷ+Niệm+3">
+                        <img src="https://placehold.co/400" class="img-fluid rounded shadow-sm gallery-thumb" alt="Buổi ra mắt sản phẩm thành công">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://via.placeholder.com/800x600?text=Kỷ+Niệm+4">
+                        <img src="https://placehold.co/400" class="img-fluid rounded shadow-sm gallery-thumb" alt="Team building ngoài trời">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://via.placeholder.com/800x600?text=Kỷ+Niệm+5">
+                        <img src="https://placehold.co/400" class="img-fluid rounded shadow-sm gallery-thumb" alt="Chứng nhận hoàn thành dự án">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="https://via.placeholder.com/800x600?text=Kỷ+Niệm+6">
+                        <img src="https://placehold.co/400" class="img-fluid rounded shadow-sm gallery-thumb" alt="Giao lưu với khách hàng quốc tế">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Image Gallery (Lightbox) -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Ảnh Kỷ Niệm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" class="img-fluid" id="modalImage" alt="Ảnh phóng to">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Nguyễn Lê Bảo Ngọc. Tất cả quyền được bảo lưu.</p>
+            <div class="social-icons">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Popper included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active nav link on scroll
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                // Adjust sectionTop by navbar height for accurate highlighting
+                const sectionTop = section.offsetTop - document.getElementById('mainNavbar').offsetHeight - 1; // -1 for small buffer
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Gallery Lightbox/Modal functionality
+        const imageModal = document.getElementById('imageModal');
+        imageModal.addEventListener('show.bs.modal', event => {
+            // Button that triggered the modal
+            const opener = event.relatedTarget;
+            // Extract info from data-bs-image attribute
+            const imageUrl = opener.getAttribute('data-bs-image');
+            const imageAlt = opener.querySelector('img').getAttribute('alt'); // Get alt from thumbnail
+
+            // Update the modal's content.
+            const modalImage = imageModal.querySelector('#modalImage');
+            modalImage.src = imageUrl;
+            modalImage.alt = imageAlt;
+
+            const modalTitle = imageModal.querySelector('.modal-title');
+            modalTitle.textContent = imageAlt; // Set modal title to alt text
+        });
+    </script>
 </body>
 </html>
