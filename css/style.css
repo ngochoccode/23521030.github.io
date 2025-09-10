@@ -1,0 +1,358 @@
+/* Custom CSS for Project Profile */
+
+:root {
+    --primary-color: #007bff; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary grey */
+    --light-bg: #f8f9fa; /* Bootstrap light background */
+    --dark-bg: #343a40; /* Bootstrap dark background */
+    --text-color: #333;
+    --heading-color: #222;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f0f2f5; /* Slightly darker than light-bg for subtle contrast */
+    scroll-behavior: smooth; /* For smooth scrolling */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+/* Navbar adjustments */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    z-index: 1030; /* Ensure navbar is always on top */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75); /* Lighter text for dark nav */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Sections Styling */
+section {
+    padding-top: 5rem; /* Space for fixed navbar */
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Personal Info */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Ensure image covers the area */
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+}
+
+#info .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+#info .list-unstyled li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#info .list-unstyled li a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+#projects .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+
+#projects .card-title {
+    color: var(--primary-color);
+}
+
+/* Experience Section (Timeline inspired) */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-color);
+    left: 50%;
+    margin-left: -1px;
+    display: none; /* Hidden on mobile */
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    order: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    order: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    order: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    order: 2;
+}
+
+
+.timeline-content {
+    padding: 1rem;
+    background-color: var(--light-bg);
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
+}
+
+.timeline-date {
+    text-align: center;
+    padding: 1rem;
+}
+
+.timeline-date span {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    white-space: nowrap; /* Prevent date from wrapping */
+}
+
+/* Responsive adjustments for timeline */
+@media (min-width: 768px) {
+    .timeline::before {
+        display: block; /* Show line on larger screens */
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        text-align: right;
+        padding-right: 30px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date {
+        justify-content: flex-start !important;
+    }
+
+    .timeline-item:nth-child(even) .timeline-date {
+        justify-content: flex-end !important;
+    }
+
+    .timeline-item .timeline-date::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        height: 12px;
+        background-color: var(--primary-color);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date::after {
+        left: calc(50% - 6px);
+    }
+
+    .timeline-item:nth-child(even) .timeline-date::after {
+        right: calc(50% - 6px);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date::before { /* Line from dot to content */
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 30px;
+        height: 2px;
+        background-color: var(--primary-color);
+        transform: translateY(-50%);
+    }
+
+    .timeline-item:nth-child(even) .timeline-date::before { /* Line from dot to content */
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 2px;
+        background-color: var(--primary-color);
+        transform: translateY(-50%);
+    }
+
+}
+/* Mobile specific timeline adjustments */
+@media (max-width: 767.98px) {
+    .timeline::before {
+        left: 20px; /* Align vertical line to the left */
+        margin-left: 0;
+    }
+    .timeline-item {
+        padding-left: 50px; /* Space for the line and dot */
+        margin-left: 0;
+    }
+    .timeline-item .timeline-date {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: auto;
+        padding: 0;
+        margin-left: 0;
+        transform: translateY(20px); /* Align badge with content */
+    }
+
+    .timeline-item .timeline-date span {
+        font-size: 0.75rem;
+    }
+
+    .timeline-item .timeline-date::after {
+        content: '';
+        position: absolute;
+        top: 28px; /* Adjust dot position */
+        left: 17px; /* Align dot with line */
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-color);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timeline-item .timeline-content {
+        padding: 1rem;
+        margin-left: 0; /* Remove horizontal padding added by default for column */
+        text-align: left !important;
+    }
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        order: initial; /* Reset order for mobile */
+    }
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        order: initial; /* Reset order for mobile */
+        justify-content: flex-start !important;
+    }
+}
+
+
+/* Hobbies Section */
+#hobbies .p-3 {
+    border: 1px solid #dee2e6 !important;
+    background-color: #fefefe;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#hobbies .p-3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+#hobbies .display-5 {
+    font-size: 3.5rem; /* Larger emoji */
+}
+
+/* Strengths Section */
+.list-group-item {
+    background-color: transparent; /* Make list items transparent for light bg */
+}
+
+.list-group-item:nth-child(odd) {
+    background-color: rgba(0, 123, 255, 0.05); /* Subtle stripe for contrast */
+}
+
+/* Footer */
+footer {
+    box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+}
+
+.footer .social-icons a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* Accessibility - Color Contrast Check (using default Bootstrap palette which is generally WCAG AA compliant) */
+/* text-dark on bg-light, text-white on bg-dark are generally good.
+   Custom colors would need explicit checking. */
+
+/* Responsive Adjustments using Bootstrap's grid and utilities already, but adding some custom ones if needed */
+@media (max-width: 575.98px) { /* Mobile */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-width: 3px;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .timeline-item {
+        padding-left: 40px; /* Adjust padding for smaller screens */
+    }
+    .timeline-item .timeline-date::after {
+        left: 17px; /* Align dot */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { /* Small Tablets */
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { /* Tablets */
+    /* Adjustments for tablet-specific layouts if necessary */
+}
+
+@media (min-width: 992px) { /* Desktops */
+    /* Desktop specific adjustments */
+}
